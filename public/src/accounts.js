@@ -25,7 +25,7 @@ function getBooksPossessedByAccount(account, books, authors) {
   );
   return borrowedBooks.map((book) => {
     const author = authors.find((author) => author.id === book.authorId);
-    return { ...book, author };
+    return { ...book, author: capitalizeString(author.name) };
   });
 }
 
