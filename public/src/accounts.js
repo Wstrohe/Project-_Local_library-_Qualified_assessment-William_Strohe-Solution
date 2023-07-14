@@ -1,3 +1,7 @@
+function capitalizeString(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function findAccountById(accounts, id) {
   return accounts.find((account) => account.id === id);
 }
@@ -26,6 +30,7 @@ function getBooksPossessedByAccount(account, books, authors) {
 }
 
 module.exports = {
+  capitalizeString,
   findAccountById,
   sortAccountsByLastName,
   getTotalNumberOfBorrows,
